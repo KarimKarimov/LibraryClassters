@@ -1,0 +1,1018 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="ru" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>classes package &#8212; документация ClusterKit 1.0.0</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/translations.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'classes';</script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="prev" title="Welcome to ClusterKit’s documentation!" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ru"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Документация ClusterKit 1.0.0</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Содержание:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">пакет классов</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Загрузите эту страницу">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/classes.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Скачать исходный файл"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Распечатать в PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Полноэкранный режим"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Поиск" aria-label="Поиск" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>classes package</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Содержание </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-classes.AgglomerativeClustering">classes.AgglomerativeClustering module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.AgglomerativeClustering.AgglomerativeClustering"><code class="docutils literal notranslate"><span class="pre">AgglomerativeClustering</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.AgglomerativeClustering.AgglomerativeClustering.fit"><code class="docutils literal notranslate"><span class="pre">AgglomerativeClustering.fit()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.AgglomerativeClustering.AgglomerativeClustering.fit_predict"><code class="docutils literal notranslate"><span class="pre">AgglomerativeClustering.fit_predict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-classes.CURE">classes.CURE module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.CURE.CURE"><code class="docutils literal notranslate"><span class="pre">CURE</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.CURE.CURE.fit"><code class="docutils literal notranslate"><span class="pre">CURE.fit()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.CURE.CURE.load_model"><code class="docutils literal notranslate"><span class="pre">CURE.load_model()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.CURE.CURE.predict"><code class="docutils literal notranslate"><span class="pre">CURE.predict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.CURE.CURE.save_model"><code class="docutils literal notranslate"><span class="pre">CURE.save_model()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-classes.Gmeans">classes.Gmeans module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.Gmeans.GMeansClustering"><code class="docutils literal notranslate"><span class="pre">GMeansClustering</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.Gmeans.GMeansClustering.fit"><code class="docutils literal notranslate"><span class="pre">GMeansClustering.fit()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.Gmeans.GMeansClustering.get_centers"><code class="docutils literal notranslate"><span class="pre">GMeansClustering.get_centers()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.Gmeans.GMeansClustering.predict"><code class="docutils literal notranslate"><span class="pre">GMeansClustering.predict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-classes.HierarchicalClustering">classes.HierarchicalClustering module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.HierarchicalClustering.HierarchicalClustering"><code class="docutils literal notranslate"><span class="pre">HierarchicalClustering</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.HierarchicalClustering.HierarchicalClustering.fit"><code class="docutils literal notranslate"><span class="pre">HierarchicalClustering.fit()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.HierarchicalClustering.HierarchicalClustering.predict"><code class="docutils literal notranslate"><span class="pre">HierarchicalClustering.predict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-classes.KMeans">classes.KMeans module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.KMeans.KMeansClustering"><code class="docutils literal notranslate"><span class="pre">KMeansClustering</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.KMeans.KMeansClustering.fit"><code class="docutils literal notranslate"><span class="pre">KMeansClustering.fit()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.KMeans.KMeansClustering.get_centers"><code class="docutils literal notranslate"><span class="pre">KMeansClustering.get_centers()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.KMeans.KMeansClustering.predict"><code class="docutils literal notranslate"><span class="pre">KMeansClustering.predict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-classes.MeanShift">classes.MeanShift module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.MeanShift.MeanShift"><code class="docutils literal notranslate"><span class="pre">MeanShift</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.MeanShift.MeanShift.fit"><code class="docutils literal notranslate"><span class="pre">MeanShift.fit()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.MeanShift.MeanShift.predict"><code class="docutils literal notranslate"><span class="pre">MeanShift.predict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-classes.Optics">classes.Optics module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.Optics.OpticsClusterer"><code class="docutils literal notranslate"><span class="pre">OpticsClusterer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.Optics.OpticsClusterer.fit"><code class="docutils literal notranslate"><span class="pre">OpticsClusterer.fit()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.Optics.OpticsClusterer.predict"><code class="docutils literal notranslate"><span class="pre">OpticsClusterer.predict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-classes">Module contents</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="classes-package">
+<h1>classes package<a class="headerlink" href="#classes-package" title="Permalink to this heading">#</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="module-classes.AgglomerativeClustering">
+<span id="classes-agglomerativeclustering-module"></span><h2>classes.AgglomerativeClustering module<a class="headerlink" href="#module-classes.AgglomerativeClustering" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="classes.AgglomerativeClustering.AgglomerativeClustering">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">classes.AgglomerativeClustering.</span></span><span class="sig-name descname"><span class="pre">AgglomerativeClustering</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_clusters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linkage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'single'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/classes/AgglomerativeClustering.html#AgglomerativeClustering"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#classes.AgglomerativeClustering.AgglomerativeClustering" title="Ссылка на это определение">#</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.AgglomerativeClustering.AgglomerativeClustering.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/classes/AgglomerativeClustering.html#AgglomerativeClustering.fit"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#classes.AgglomerativeClustering.AgglomerativeClustering.fit" title="Ссылка на это определение">#</a></dt>
+<dd><p>Обучение модели агломеративной кластеризации на входных данных.</p>
+<p>Параметры:
+- X (ndarray): Входные данные размерности (n_samples, n_features).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.AgglomerativeClustering.AgglomerativeClustering.fit_predict">
+<span class="sig-name descname"><span class="pre">fit_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/classes/AgglomerativeClustering.html#AgglomerativeClustering.fit_predict"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#classes.AgglomerativeClustering.AgglomerativeClustering.fit_predict" title="Ссылка на это определение">#</a></dt>
+<dd><p>Обучение модели агломеративной кластеризации на входных данных и возврат меток кластеров.</p>
+<p>Параметры:
+- X (ndarray): Входные данные размерности (n_samples, n_features).</p>
+<p>Возвращает:
+- labels (ndarray): Метки кластеров, назначенные каждой точке данных.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-classes.CURE">
+<span id="classes-cure-module"></span><h2>classes.CURE module<a class="headerlink" href="#module-classes.CURE" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="classes.CURE.CURE">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">classes.CURE.</span></span><span class="sig-name descname"><span class="pre">CURE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_clusters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linkage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ward'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/classes/CURE.html#CURE"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#classes.CURE.CURE" title="Ссылка на это определение">#</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseEstimator</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ClusterMixin</span></code></p>
+<p>Класс для выполнения кластеризации методом CURE.</p>
+<section id="id1">
+<h3>Параметры:<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>n_clusters<span class="classifier">int, optional (default=2)</span></dt><dd><p>Количество кластеров.</p>
+</dd>
+<dt>alpha<span class="classifier">float, optional (default=0.5)</span></dt><dd><p>Параметр для вычисления новых центроидов.</p>
+</dd>
+<dt>c_size<span class="classifier">int, optional (default=3)</span></dt><dd><p>Размер выборки при выборе начальных центроидов.</p>
+</dd>
+<dt>linkage<span class="classifier">str, optional (default=“ward“)</span></dt><dd><p>Метод объединения для иерархической кластеризации.</p>
+</dd>
+</dl>
+</section>
+<section id="id2">
+<h3>Атрибуты:<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>n_clusters<span class="classifier">int</span></dt><dd><p>Количество кластеров.</p>
+</dd>
+<dt>alpha<span class="classifier">float</span></dt><dd><p>Параметр для вычисления новых центроидов.</p>
+</dd>
+<dt>c_size<span class="classifier">int</span></dt><dd><p>Размер выборки при выборе начальных центроидов.</p>
+</dd>
+<dt>linkage<span class="classifier">str</span></dt><dd><p>Метод объединения для иерархической кластеризации.</p>
+</dd>
+<dt><a href="#id32"><span class="problematic" id="id33">labels_</span></a><span class="classifier">numpy.ndarray</span></dt><dd><p>Метки кластеров.</p>
+</dd>
+<dt><a href="#id34"><span class="problematic" id="id35">centroids_</span></a><span class="classifier">list</span></dt><dd><p>Центроиды кластеров.</p>
+</dd>
+</dl>
+</section>
+<section id="id3">
+<h3>Методы:<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>fit(X, y=None)</dt><dd><p>Обучает модель CURE на данных X.</p>
+</dd>
+<dt>predict(X)</dt><dd><p>Прогнозирует метки кластеров на основе обученной модели CURE.</p>
+</dd>
+<dt>save_model(filename)</dt><dd><p>Сохраняет модель в файл.</p>
+</dd>
+<dt>load_model(filename)</dt><dd><p>Загружает модель из файла.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.CURE.CURE.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/classes/CURE.html#CURE.fit"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#classes.CURE.CURE.fit" title="Ссылка на это определение">#</a></dt>
+<dd><p>Обучает модель CURE на данных X.</p>
+<section id="id4">
+<h4>Параметры:<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
+<dl class="simple">
+<dt>X<span class="classifier">array-like, shape (n_samples, n_features)</span></dt><dd><p>Входные данные для обучения модели.</p>
+</dd>
+<dt>y<span class="classifier">array-like, shape (n_samples,), optional (default=None)</span></dt><dd><p>Метки классов, не используются в данной модели.</p>
+</dd>
+</dl>
+</section>
+<section id="id5">
+<h4>Возвращает:<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
+<dl class="simple">
+<dt>self<span class="classifier">object</span></dt><dd><p>Ссылка на сам объект.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.CURE.CURE.load_model">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/classes/CURE.html#CURE.load_model"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#classes.CURE.CURE.load_model" title="Ссылка на это определение">#</a></dt>
+<dd><p>Загружает модель из файла.</p>
+<section id="id6">
+<h4>Параметры:<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
+<dl class="simple">
+<dt>filename<span class="classifier">str</span></dt><dd><p>Имя файла, содержащего модель.</p>
+</dd>
+</dl>
+</section>
+<section id="id7">
+<h4>Возвращает:<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h4>
+<dl class="simple">
+<dt>model<span class="classifier">CURE</span></dt><dd><p>Загруженная модель CURE.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.CURE.CURE.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/classes/CURE.html#CURE.predict"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#classes.CURE.CURE.predict" title="Ссылка на это определение">#</a></dt>
+<dd><p>Прогнозирует метки кластеров на основе обученной модели CURE.</p>
+<section id="id8">
+<h4>Параметры:<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h4>
+<dl class="simple">
+<dt>X<span class="classifier">array-like, shape (n_samples, n_features)</span></dt><dd><p>Входные данные для прогнозирования меток кластеров.</p>
+</dd>
+</dl>
+</section>
+<section id="id9">
+<h4>Возвращает:<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h4>
+<dl class="simple">
+<dt>labels<span class="classifier">numpy.ndarray, shape (n_samples,)</span></dt><dd><p>Метки кластеров.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.CURE.CURE.save_model">
+<span class="sig-name descname"><span class="pre">save_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/classes/CURE.html#CURE.save_model"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#classes.CURE.CURE.save_model" title="Ссылка на это определение">#</a></dt>
+<dd><p>Сохраняет модель в файл.</p>
+<section id="id10">
+<h4>Параметры:<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h4>
+<dl class="simple">
+<dt>filename<span class="classifier">str</span></dt><dd><p>Имя файла для сохранения модели.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+<section id="module-classes.Gmeans">
+<span id="classes-gmeans-module"></span><h2>classes.Gmeans module<a class="headerlink" href="#module-classes.Gmeans" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="classes.Gmeans.GMeansClustering">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">classes.Gmeans.</span></span><span class="sig-name descname"><span class="pre">GMeansClustering</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/classes/Gmeans.html#GMeansClustering"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#classes.Gmeans.GMeansClustering" title="Ссылка на это определение">#</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Класс для выполнения кластеризации методом G-Means.</p>
+<section id="id11">
+<h3>Параметры:<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>tolerance<span class="classifier">float, optional (default=0.001)</span></dt><dd><p>Параметр для определения остановки алгоритма.</p>
+</dd>
+</dl>
+</section>
+<section id="id12">
+<h3>Атрибуты:<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>tolerance<span class="classifier">float</span></dt><dd><p>Параметр для определения остановки алгоритма.</p>
+</dd>
+<dt>model<span class="classifier">pyclustering.cluster.gmeans.gmeans</span></dt><dd><p>Объект модели G-Means.</p>
+</dd>
+</dl>
+</section>
+<section id="id13">
+<h3>Методы:<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>fit(X)</dt><dd><p>Обучает модель G-Means на данных X.</p>
+</dd>
+<dt>predict(X)</dt><dd><p>Прогнозирует метки кластеров на основе обученной модели G-Means.</p>
+</dd>
+<dt>get_centers()</dt><dd><p>Возвращает центры кластеров, найденные моделью G-Means.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.Gmeans.GMeansClustering.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/classes/Gmeans.html#GMeansClustering.fit"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#classes.Gmeans.GMeansClustering.fit" title="Ссылка на это определение">#</a></dt>
+<dd><p>Обучает модель G-Means на данных X.</p>
+<section id="id14">
+<h4>Параметры:<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h4>
+<dl class="simple">
+<dt>X<span class="classifier">array-like, shape (n_samples, n_features)</span></dt><dd><p>Входные данные для обучения модели.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.Gmeans.GMeansClustering.get_centers">
+<span class="sig-name descname"><span class="pre">get_centers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/classes/Gmeans.html#GMeansClustering.get_centers"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#classes.Gmeans.GMeansClustering.get_centers" title="Ссылка на это определение">#</a></dt>
+<dd><p>Возвращает центры кластеров, найденные моделью G-Means.</p>
+<section id="id15">
+<h4>Возвращает:<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h4>
+<dl class="simple">
+<dt>centers<span class="classifier">array-like, shape (n_clusters, n_features)</span></dt><dd><p>Центры кластеров.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.Gmeans.GMeansClustering.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/classes/Gmeans.html#GMeansClustering.predict"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#classes.Gmeans.GMeansClustering.predict" title="Ссылка на это определение">#</a></dt>
+<dd><p>Прогнозирует метки кластеров на основе обученной модели G-Means.</p>
+<section id="id16">
+<h4>Параметры:<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h4>
+<dl class="simple">
+<dt>X<span class="classifier">array-like, shape (n_samples, n_features)</span></dt><dd><p>Данные для прогнозирования меток кластеров.</p>
+</dd>
+</dl>
+</section>
+<section id="id17">
+<h4>Возвращает:<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h4>
+<dl class="simple">
+<dt>labels<span class="classifier">list</span></dt><dd><p>Метки кластеров для каждой точки данных.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+<section id="module-classes.HierarchicalClustering">
+<span id="classes-hierarchicalclustering-module"></span><h2>classes.HierarchicalClustering module<a class="headerlink" href="#module-classes.HierarchicalClustering" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="classes.HierarchicalClustering.HierarchicalClustering">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">classes.HierarchicalClustering.</span></span><span class="sig-name descname"><span class="pre">HierarchicalClustering</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">linkage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'single'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/classes/HierarchicalClustering.html#HierarchicalClustering"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#classes.HierarchicalClustering.HierarchicalClustering" title="Ссылка на это определение">#</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.HierarchicalClustering.HierarchicalClustering.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/classes/HierarchicalClustering.html#HierarchicalClustering.fit"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#classes.HierarchicalClustering.HierarchicalClustering.fit" title="Ссылка на это определение">#</a></dt>
+<dd><p>Обучает модель иерархической кластеризации на заданном наборе данных.</p>
+<dl class="simple">
+<dt>Параметры:</dt><dd><dl class="simple">
+<dt>X (ndarray): Массив данных размерности (n_samples, n_features),</dt><dd><p>где n_samples - количество образцов, n_features - количество
+признаков.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.HierarchicalClustering.HierarchicalClustering.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/classes/HierarchicalClustering.html#HierarchicalClustering.predict"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#classes.HierarchicalClustering.HierarchicalClustering.predict" title="Ссылка на это определение">#</a></dt>
+<dd><p>Предсказывает кластеры для новых данных.</p>
+<dl class="simple">
+<dt>Параметры:</dt><dd><dl class="simple">
+<dt>X (ndarray): Массив новых данных размерности (n_samples, n_features),</dt><dd><p>где n_samples - количество образцов, n_features - количество
+признаков.</p>
+</dd>
+</dl>
+</dd>
+<dt>Возвращает:</dt><dd><dl class="simple">
+<dt>ndarray: Массив меток кластеров размерности (n_samples,), где каждая метка</dt><dd><p>указывает на принадлежность образца к соответствующему кластеру.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-classes.KMeans">
+<span id="classes-kmeans-module"></span><h2>classes.KMeans module<a class="headerlink" href="#module-classes.KMeans" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="classes.KMeans.KMeansClustering">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">classes.KMeans.</span></span><span class="sig-name descname"><span class="pre">KMeansClustering</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_clusters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_init</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">300</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/classes/KMeans.html#KMeansClustering"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#classes.KMeans.KMeansClustering" title="Ссылка на это определение">#</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Класс для выполнения кластеризации методом KMeans.</p>
+<section id="id18">
+<h3>Параметры:<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>n_clusters<span class="classifier">int, optional (default=8)</span></dt><dd><p>Количество кластеров для формирования.</p>
+</dd>
+<dt>n_init<span class="classifier">int, optional (default=300)</span></dt><dd><p>Количество итераций для поиска начальных центров кластеров.</p>
+</dd>
+<dt>random_state<span class="classifier">int, optional (default=None)</span></dt><dd><p>Зерно для инициализации генератора случайных чисел.</p>
+</dd>
+</dl>
+</section>
+<section id="id19">
+<h3>Атрибуты:<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>n_clusters<span class="classifier">int</span></dt><dd><p>Количество кластеров для формирования.</p>
+</dd>
+<dt>max_iter<span class="classifier">int</span></dt><dd><p>Количество итераций для поиска начальных центров кластеров.</p>
+</dd>
+<dt>random_state<span class="classifier">int</span></dt><dd><p>Зерно для инициализации генератора случайных чисел.</p>
+</dd>
+<dt>model<span class="classifier">sklearn.cluster.KMeans</span></dt><dd><p>Объект модели KMeans, обученный на данных.</p>
+</dd>
+</dl>
+</section>
+<section id="id20">
+<h3>Методы:<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>fit(X)</dt><dd><p>Обучает модель KMeans на данных X.</p>
+</dd>
+<dt>predict(X)</dt><dd><p>Прогнозирует метки кластеров для данных X на основе обученной модели KMeans.</p>
+</dd>
+<dt>get_centers()</dt><dd><p>Возвращает центры кластеров, найденные моделью KMeans.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.KMeans.KMeansClustering.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/classes/KMeans.html#KMeansClustering.fit"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#classes.KMeans.KMeansClustering.fit" title="Ссылка на это определение">#</a></dt>
+<dd><p>Обучает модель KMeans на данных X.</p>
+<section id="id21">
+<h4>Параметры:<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h4>
+<dl class="simple">
+<dt>X<span class="classifier">array-like, shape (n_samples, n_features)</span></dt><dd><p>Входные данные для обучения модели.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.KMeans.KMeansClustering.get_centers">
+<span class="sig-name descname"><span class="pre">get_centers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/classes/KMeans.html#KMeansClustering.get_centers"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#classes.KMeans.KMeansClustering.get_centers" title="Ссылка на это определение">#</a></dt>
+<dd><p>Возвращает центры кластеров, найденные моделью KMeans.</p>
+<section id="id22">
+<h4>Возвращает:<a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h4>
+<dl class="simple">
+<dt>centers<span class="classifier">array-like, shape (n_clusters, n_features)</span></dt><dd><p>Координаты центров кластеров.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.KMeans.KMeansClustering.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/classes/KMeans.html#KMeansClustering.predict"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#classes.KMeans.KMeansClustering.predict" title="Ссылка на это определение">#</a></dt>
+<dd><p>Прогнозирует метки кластеров для данных X на основе обученной модели KMeans.</p>
+<section id="id23">
+<h4>Параметры:<a class="headerlink" href="#id23" title="Permalink to this heading">#</a></h4>
+<dl class="simple">
+<dt>X<span class="classifier">array-like, shape (n_samples, n_features)</span></dt><dd><p>Входные данные для прогнозирования меток кластеров.</p>
+</dd>
+</dl>
+</section>
+<section id="id24">
+<h4>Возвращает:<a class="headerlink" href="#id24" title="Permalink to this heading">#</a></h4>
+<dl class="simple">
+<dt>labels<span class="classifier">array-like, shape (n_samples,)</span></dt><dd><p>Метки кластеров для каждой точки данных.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+<section id="module-classes.MeanShift">
+<span id="classes-meanshift-module"></span><h2>classes.MeanShift module<a class="headerlink" href="#module-classes.MeanShift" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="classes.MeanShift.MeanShift">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">classes.MeanShift.</span></span><span class="sig-name descname"><span class="pre">MeanShift</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kernel_bandwidth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/classes/MeanShift.html#MeanShift"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#classes.MeanShift.MeanShift" title="Ссылка на это определение">#</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Класс для выполнения кластеризации методом Mean Shift.</p>
+<section id="parameters">
+<h3>Parameters:<a class="headerlink" href="#parameters" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>kernel_bandwidth<span class="classifier">float, optional (default=1)</span></dt><dd><p>Ширина ядра, используемая для вычисления весов точек.</p>
+</dd>
+</dl>
+</section>
+<section id="attributes">
+<h3>Attributes:<a class="headerlink" href="#attributes" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>centers<span class="classifier">array-like, shape (n_clusters, n_features)</span></dt><dd><p>Центры кластеров, полученные после выполнения кластеризации.</p>
+</dd>
+</dl>
+</section>
+<section id="methods">
+<h3>Methods:<a class="headerlink" href="#methods" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>fit(X):</dt><dd><p>Обучает модель на данных X и находит центры кластеров.</p>
+</dd>
+<dt>predict(X):</dt><dd><p>Прогнозирует метки кластеров для данных X на основе найденных центров.</p>
+</dd>
+<dt>_radial_kernel(distances, bandwidth):</dt><dd><p>Вычисляет радиальное ядро для весов точек на основе расстояний и ширины ядра.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.MeanShift.MeanShift.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/classes/MeanShift.html#MeanShift.fit"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#classes.MeanShift.MeanShift.fit" title="Ссылка на это определение">#</a></dt>
+<dd><p>Обучает модель на данных X и находит центры кластеров.</p>
+<section id="id25">
+<h4>Parameters:<a class="headerlink" href="#id25" title="Permalink to this heading">#</a></h4>
+<dl class="simple">
+<dt>X<span class="classifier">array-like, shape (n_samples, n_features)</span></dt><dd><p>Входные данные для обучения модели.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.MeanShift.MeanShift.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/classes/MeanShift.html#MeanShift.predict"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#classes.MeanShift.MeanShift.predict" title="Ссылка на это определение">#</a></dt>
+<dd><p>Прогнозирует метки кластеров для данных X на основе найденных центров.</p>
+<section id="id26">
+<h4>Parameters:<a class="headerlink" href="#id26" title="Permalink to this heading">#</a></h4>
+<dl class="simple">
+<dt>X<span class="classifier">array-like, shape (n_samples, n_features)</span></dt><dd><p>Входные данные для прогнозирования меток кластеров.</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h4>Returns:<a class="headerlink" href="#returns" title="Permalink to this heading">#</a></h4>
+<dl class="simple">
+<dt>labels<span class="classifier">array-like, shape (n_samples,)</span></dt><dd><p>Метки кластеров для каждой точки данных.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+<section id="module-classes.Optics">
+<span id="classes-optics-module"></span><h2>classes.Optics module<a class="headerlink" href="#module-classes.Optics" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="classes.Optics.OpticsClusterer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">classes.Optics.</span></span><span class="sig-name descname"><span class="pre">OpticsClusterer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_samples</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_cluster_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/classes/Optics.html#OpticsClusterer"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#classes.Optics.OpticsClusterer" title="Ссылка на это определение">#</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Класс для выполнения кластеризации методом OPTICS.</p>
+<section id="id27">
+<h3>Параметры:<a class="headerlink" href="#id27" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>min_samples<span class="classifier">int, optional (default=5)</span></dt><dd><p>Минимальное количество соседей для определения ядра кластера.</p>
+</dd>
+<dt>xi<span class="classifier">float, optional (default=0.05)</span></dt><dd><p>Параметр определения расстояния между кластерами.</p>
+</dd>
+<dt>min_cluster_size<span class="classifier">float, optional (default=0.1)</span></dt><dd><p>Минимальный размер кластера.</p>
+</dd>
+</dl>
+</section>
+<section id="id28">
+<h3>Атрибуты:<a class="headerlink" href="#id28" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>min_samples<span class="classifier">int</span></dt><dd><p>Минимальное количество соседей для определения ядра кластера.</p>
+</dd>
+<dt>xi<span class="classifier">float</span></dt><dd><p>Параметр определения расстояния между кластерами.</p>
+</dd>
+<dt>min_cluster_size<span class="classifier">float</span></dt><dd><p>Минимальный размер кластера.</p>
+</dd>
+<dt>clusterer<span class="classifier">sklearn.cluster.OPTICS</span></dt><dd><p>Объект модели OPTICS, обученный на данных.</p>
+</dd>
+</dl>
+</section>
+<section id="id29">
+<h3>Методы:<a class="headerlink" href="#id29" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>fit(X)</dt><dd><p>Обучает модель OPTICS на данных X.</p>
+</dd>
+<dt>predict()</dt><dd><p>Прогнозирует метки кластеров на основе обученной модели OPTICS.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.Optics.OpticsClusterer.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/classes/Optics.html#OpticsClusterer.fit"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#classes.Optics.OpticsClusterer.fit" title="Ссылка на это определение">#</a></dt>
+<dd><p>Обучает модель OPTICS на данных X.</p>
+<section id="id30">
+<h4>Параметры:<a class="headerlink" href="#id30" title="Permalink to this heading">#</a></h4>
+<dl class="simple">
+<dt>X<span class="classifier">array-like, shape (n_samples, n_features)</span></dt><dd><p>Входные данные для обучения модели.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.Optics.OpticsClusterer.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/classes/Optics.html#OpticsClusterer.predict"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#classes.Optics.OpticsClusterer.predict" title="Ссылка на это определение">#</a></dt>
+<dd><p>Прогнозирует метки кластеров на основе обученной модели OPTICS.</p>
+<section id="id31">
+<h4>Возвращает:<a class="headerlink" href="#id31" title="Permalink to this heading">#</a></h4>
+<dl class="simple">
+<dt>labels<span class="classifier">array-like, shape (n_samples,)</span></dt><dd><p>Метки кластеров для каждой точки данных.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+<section id="module-classes">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-classes" title="Permalink to this heading">#</a></h2>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">назад</p>
+        <p class="prev-next-title">Welcome to ClusterKit’s documentation!</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Содержание
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-classes.AgglomerativeClustering">classes.AgglomerativeClustering module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.AgglomerativeClustering.AgglomerativeClustering"><code class="docutils literal notranslate"><span class="pre">AgglomerativeClustering</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.AgglomerativeClustering.AgglomerativeClustering.fit"><code class="docutils literal notranslate"><span class="pre">AgglomerativeClustering.fit()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.AgglomerativeClustering.AgglomerativeClustering.fit_predict"><code class="docutils literal notranslate"><span class="pre">AgglomerativeClustering.fit_predict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-classes.CURE">classes.CURE module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.CURE.CURE"><code class="docutils literal notranslate"><span class="pre">CURE</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.CURE.CURE.fit"><code class="docutils literal notranslate"><span class="pre">CURE.fit()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.CURE.CURE.load_model"><code class="docutils literal notranslate"><span class="pre">CURE.load_model()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.CURE.CURE.predict"><code class="docutils literal notranslate"><span class="pre">CURE.predict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.CURE.CURE.save_model"><code class="docutils literal notranslate"><span class="pre">CURE.save_model()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-classes.Gmeans">classes.Gmeans module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.Gmeans.GMeansClustering"><code class="docutils literal notranslate"><span class="pre">GMeansClustering</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.Gmeans.GMeansClustering.fit"><code class="docutils literal notranslate"><span class="pre">GMeansClustering.fit()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.Gmeans.GMeansClustering.get_centers"><code class="docutils literal notranslate"><span class="pre">GMeansClustering.get_centers()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.Gmeans.GMeansClustering.predict"><code class="docutils literal notranslate"><span class="pre">GMeansClustering.predict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-classes.HierarchicalClustering">classes.HierarchicalClustering module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.HierarchicalClustering.HierarchicalClustering"><code class="docutils literal notranslate"><span class="pre">HierarchicalClustering</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.HierarchicalClustering.HierarchicalClustering.fit"><code class="docutils literal notranslate"><span class="pre">HierarchicalClustering.fit()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.HierarchicalClustering.HierarchicalClustering.predict"><code class="docutils literal notranslate"><span class="pre">HierarchicalClustering.predict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-classes.KMeans">classes.KMeans module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.KMeans.KMeansClustering"><code class="docutils literal notranslate"><span class="pre">KMeansClustering</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.KMeans.KMeansClustering.fit"><code class="docutils literal notranslate"><span class="pre">KMeansClustering.fit()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.KMeans.KMeansClustering.get_centers"><code class="docutils literal notranslate"><span class="pre">KMeansClustering.get_centers()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.KMeans.KMeansClustering.predict"><code class="docutils literal notranslate"><span class="pre">KMeansClustering.predict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-classes.MeanShift">classes.MeanShift module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.MeanShift.MeanShift"><code class="docutils literal notranslate"><span class="pre">MeanShift</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.MeanShift.MeanShift.fit"><code class="docutils literal notranslate"><span class="pre">MeanShift.fit()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.MeanShift.MeanShift.predict"><code class="docutils literal notranslate"><span class="pre">MeanShift.predict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-classes.Optics">classes.Optics module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.Optics.OpticsClusterer"><code class="docutils literal notranslate"><span class="pre">OpticsClusterer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.Optics.OpticsClusterer.fit"><code class="docutils literal notranslate"><span class="pre">OpticsClusterer.fit()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes.Optics.OpticsClusterer.predict"><code class="docutils literal notranslate"><span class="pre">OpticsClusterer.predict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-classes">Module contents</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+По Karimjon
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023, Karimjon.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
