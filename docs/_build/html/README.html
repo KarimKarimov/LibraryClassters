@@ -1,343 +1,349 @@
+
+
 <!DOCTYPE html>
 
 
-<html lang="ru">
+<html lang="ru" >
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-  <title>Кластеризация - Библиотека Python &#8212; документация ClusterKit 1.0.0</title>
-
-
-
+    <title>Кластеризация - Библиотека Python &#8212; документация ClusterKit 1.0.0</title>
+  
+  
+  
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
-
+  
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-
+  
   <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-  <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-  <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285"
-    type="text/css" />
-
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-  <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-  <script src="_static/doctools.js"></script>
-  <script src="_static/sphinx_highlight.js"></script>
-  <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-  <script src="_static/translations.js"></script>
-  <script>DOCUMENTATION_OPTIONS.pagename = 'README';</script>
-  <link rel="index" title="Алфавитный указатель" href="genindex.html" />
-  <link rel="search" title="Поиск" href="search.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="docsearch:language" content="ru" />
-</head>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/translations.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'README';</script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="LibraryClassters" href="modules.html" />
+    <link rel="prev" title="Добро пожаловать в документацию ClusterKit!" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ru"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-
-<body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%"
-  data-default-mode="">
-
-
-
-  <a class="skip-link" href="#main-content">Перейти к основному содержанию</a>
-
-  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary" />
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
   <label class="overlay overlay-primary" for="__primary"></label>
-
-  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary" />
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
   <label class="overlay overlay-secondary" for="__secondary"></label>
-
+  
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
     <div class="search-button__search-container">
-      <form class="bd-search d-flex align-items-center" action="search.html" method="get">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="search" class="form-control" name="q" id="search-input" placeholder="Search..."
-          aria-label="Search..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
-        <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-      </form>
-    </div>
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
   </div>
-
-  <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-  </nav>
-
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-
+      
       <div class="bd-sidebar-primary bd-sidebar">
+        
 
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
 
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">документация ClusterKit 1.0.0</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Содержание:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Кластеризация - Библиотека Python</a></li>
 
-        <div class="sidebar-header-items sidebar-primary__section">
+<li class="toctree-l1 has-children"><a class="reference internal" href="modules.html">LibraryClassters</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="classes.html">Пакет классов</a></li>
+</ul>
+</li>
+</ul>
 
-
-
-
-        </div>
-
-        <div class="sidebar-primary-items__start sidebar-primary__section">
-          <div class="sidebar-primary-item">
-
-
-            <a class="navbar-brand logo" href="index.html">
-
-
-
-
-
-              <p class="title logo__title">Документация ClusterKit 1.0.0</p>
-
-            </a>
-          </div>
-          <div class="sidebar-primary-item">
-            <nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-              <div class="bd-toc-item navbar-nav active">
-                <p aria-level="2" class="caption" role="heading"><span class="caption-text">Содержание:</span></p>
-                <ul class="nav bd-sidenav">
-                  <li class="toctree-l1"><a class="reference internal" href="classes.html">пакет классов</a></li>
-                </ul>
-
-              </div>
-            </nav>
-          </div>
-        </div>
-
-
-        <div class="sidebar-primary-items__end sidebar-primary__section">
-        </div>
-
-        <div id="rtd-footer-container"></div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
-
+      
       <main id="main-content" class="bd-main">
+        
+        
 
+<div class="sbt-scroll-pixel-helper"></div>
 
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
 
-        <div class="sbt-scroll-pixel-helper"></div>
-
-        <div class="bd-content">
-          <div class="bd-article-container">
-
-            <div class="bd-header-article">
-              <div class="header-article-items header-article__inner">
-
-                <div class="header-article-items__start">
-
-                  <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm"
-                      for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom"
-                      data-bs-toggle="tooltip">
-                      <span class="fa-solid fa-bars"></span>
-                    </label></div>
-
-                </div>
-
-
-                <div class="header-article-items__end">
-
-                  <div class="header-article-item">
-
-                    <div class="article-header-buttons">
+<div class="article-header-buttons">
 
 
 
 
 
-                      <div class="dropdown dropdown-download-buttons">
-                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                          aria-expanded="false" aria-label="Загрузите эту страницу">
-                          <i class="fas fa-download"></i>
-                        </button>
-                        <ul class="dropdown-menu">
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Загрузите эту страницу">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/README.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Скачать исходный файл"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Распечатать в PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
 
 
 
-                          <li><a href="_sources/README.rst" target="_blank"
-                              class="btn btn-sm btn-download-source-button dropdown-item" title="Скачать исходный файл"
-                              data-bs-placement="left" data-bs-toggle="tooltip">
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Полноэкранный режим"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
 
 
-                              <span class="btn__icon-container">
-                                <i class="fas fa-file"></i>
-                              </span>
-                              <span class="btn__text-container">.rst</span>
-                            </a>
-                          </li>
-
-
-
-
-                          <li>
-                            <button onclick="window.print()" class="btn btn-sm btn-download-pdf-button dropdown-item"
-                              title="Распечатать в PDF" data-bs-placement="left" data-bs-toggle="tooltip">
-
-
-                              <span class="btn__icon-container">
-                                <i class="fas fa-file-pdf"></i>
-                              </span>
-                              <span class="btn__text-container">.pdf</span>
-                            </button>
-                          </li>
-
-                        </ul>
-                      </div>
-
-
-
-
-                      <button onclick="toggleFullScreen()" class="btn btn-sm btn-fullscreen-button"
-                        title="Полноэкранный режим" data-bs-placement="bottom" data-bs-toggle="tooltip">
-
-
-                        <span class="btn__icon-container">
-                          <i class="fas fa-expand"></i>
-                        </span>
-
-                      </button>
-
-
-                      <script>
-                        document.write(`
+<script>
+document.write(`
   <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
     <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
     <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
-                      </script>
+</script>
 
-                      <script>
-                        document.write(`
+<script>
+document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Поиск" aria-label="Поиск" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
   </button>
 `);
-                      </script>
-                      <label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"
-                        title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-                        <span class="fa-solid fa-list"></span>
-                      </label>
-                    </div>
-                  </div>
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
 
-                </div>
-
-              </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Кластеризация - Библиотека Python</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Содержание </h2>
             </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Кластеризация - Библиотека Python</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Установка</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Возможности</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Пример использования</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Инструкции по использованию документации</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Введение</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Навигация</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Структура документации</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Поиск информации</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Примеры использования</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Справочная информация</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Взаимодействие с сообществом</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Важные указания</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Документация</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Автор</a></li>
+</ul>
+</li>
+</ul>
 
+            </nav>
+        </div>
+    </div>
+</div>
 
-
-            <div id="jb-print-docs-body" class="onlyprint">
-              <h1>Кластеризация - Библиотека Python</h1>
-              <!-- Table of contents -->
-              <div id="print-main-content">
-                <div id="jb-print-toc">
-
-                  <div>
-                    <h2> Содержание </h2>
-                  </div>
-                  <nav aria-label="Page">
-                    <ul class="visible nav section-nav flex-column">
-                      <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link"
-                          href="#id1">Установка</a></li>
-                      <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link"
-                          href="#id2">Возможности</a></li>
-                      <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Пример
-                          использования</a></li>
-                      <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link"
-                          href="#id4">Документация</a></li>
-                      <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Автор</a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
-
-
-
-            <div id="searchbox"></div>
-            <article class="bd-article" role="main">
-
-              <section id="python">
-                <h1>Кластеризация - Библиотека Python<a class="headerlink" href="#python"
-                    title="Permalink to this heading">#</a></h1>
-                <p>Это библиотека Python для реализации различных алгоритмов кластеризации. Она предоставляет простой и
-                  удобный интерфейс для кластеризации данных и может быть использована для различных задач, включая
-                  сегментацию данных, выявление аномалий и понимание структуры данных.</p>
-                <section id="id1">
-                  <h2>Установка<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
-                  <p>Установите библиотеку с помощью pip:</p>
-                  <div class="highlight-default notranslate">
-                    <div class="highlight">
-                      <pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">clustering</span><span class="o">-</span><span class="n">library</span>
-</pre>
-                    </div>
-                  </div>
-                </section>
-                <section id="id2">
-                  <h2>Возможности<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
-                  <p>Библиотека включает следующие классы для кластеризации:</p>
-                  <dl class="simple">
-                    <dt>AgglomerativeClustering</dt>
-                    <dd>
-                      <p>Реализация иерархической кластеризации с различными методами объединения кластеров.</p>
-                    </dd>
-                    <dt>CURE</dt>
-                    <dd>
-                      <p>Реализация алгоритма CURE (Clustering Using Representatives) для кластеризации больших наборов
-                        данных.</p>
-                    </dd>
-                    <dt>GMeansClustering</dt>
-                    <dd>
-                      <p>Реализация алгоритма G-Means для автоматического определения оптимального количества кластеров.
-                      </p>
-                    </dd>
-                    <dt>HierarchicalClustering</dt>
-                    <dd>
-                      <p>Простая реализация иерархической кластеризации с использованием метода одиночного связывания.
-                      </p>
-                    </dd>
-                    <dt>KMeansClustering</dt>
-                    <dd>
-                      <p>Реализация алгоритма K-средних для кластеризации данных.</p>
-                    </dd>
-                    <dt>MeanShift</dt>
-                    <dd>
-                      <p>Реализация алгоритма Mean Shift для кластеризации данных.</p>
-                    </dd>
-                    <dt>OpticsClusterer</dt>
-                    <dd>
-                      <p>Реализация алгоритма OPTICS (Ordering Points To Identify the Clustering Structure) для
-                        кластеризации.</p>
-                    </dd>
-                  </dl>
-                </section>
-                <section id="id3">
-                  <h2>Пример использования<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
-                  <div class="highlight-python notranslate">
-                    <div class="highlight">
-                      <pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="python">
+<h1>Кластеризация - Библиотека Python<a class="headerlink" href="#python" title="Permalink to this heading">#</a></h1>
+<p>Это библиотека Python для реализации различных алгоритмов кластеризации. Она предоставляет простой и удобный интерфейс для кластеризации данных и может быть использована для различных задач, включая сегментацию данных, выявление аномалий и понимание структуры данных.</p>
+<section id="id1">
+<h2>Установка<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<p>Установите библиотеку с помощью pip:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">clustering</span><span class="o">-</span><span class="n">library</span>
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h2>Возможности<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<p>Библиотека включает следующие классы для кластеризации:</p>
+<dl class="simple">
+<dt>AgglomerativeClustering</dt><dd><p>Реализация иерархической кластеризации с различными методами объединения кластеров.</p>
+</dd>
+<dt>CURE</dt><dd><p>Реализация алгоритма CURE (Clustering Using Representatives) для кластеризации больших наборов данных.</p>
+</dd>
+<dt>GMeansClustering</dt><dd><p>Реализация алгоритма G-Means для автоматического определения оптимального количества кластеров.</p>
+</dd>
+<dt>HierarchicalClustering</dt><dd><p>Простая реализация иерархической кластеризации с использованием метода одиночного связывания.</p>
+</dd>
+<dt>KMeansClustering</dt><dd><p>Реализация алгоритма K-средних для кластеризации данных.</p>
+</dd>
+<dt>MeanShift</dt><dd><p>Реализация алгоритма Mean Shift для кластеризации данных.</p>
+</dd>
+<dt>OpticsClusterer</dt><dd><p>Реализация алгоритма OPTICS (Ordering Points To Identify the Clustering Structure) для кластеризации.</p>
+</dd>
+</dl>
+</section>
+<section id="id3">
+<h2>Пример использования<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<p><strong>Метода KMeansClustering</strong>:</p>
+<div class="admonition tip">
+<p class="admonition-title">Совет</p>
+<p>Для использования класса KMeansClustering, следуйте примеру ниже:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">clustering</span> <span class="kn">import</span> <span class="n">KMeansClustering</span>
 
 <span class="c1"># Создание набора данных</span>
@@ -350,118 +356,295 @@
 
 <span class="c1"># Вывод меток кластеров</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
-</pre>
-                    </div>
-                  </div>
-                </section>
-                <section id="id4">
-                  <h2>Документация<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
-                  <p>Дополнительную информацию о каждом классе и его методах можно найти в <span
-                      class="xref std std-doc">документации</span>.</p>
-                </section>
-                <section id="id5">
-                  <h2>Автор<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
-                  <p>Библиотека разработана и поддерживается Karimjon.</p>
-                </section>
-              </section>
+</pre></div>
+</div>
+<p>Пожалуйста, убедитесь, что у вас установлена библиотека NumPy, и что класс KMeansClustering находится в модуле «clustering».</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Класс KMeansClustering предоставляет возможность выполнения кластеризации методом KMeans.</p>
+<p><strong>Параметры:</strong></p>
+<ul class="simple">
+<li><p><cite>n_clusters</cite> (int, optional, default=8): Количество кластеров для формирования.</p></li>
+<li><p><cite>n_init</cite> (int, optional, default=300): Количество итераций для поиска начальных центров кластеров.</p></li>
+<li><p><cite>random_state</cite> (int, optional, default=None): Зерно для инициализации генератора случайных чисел.</p></li>
+</ul>
+<p><strong>Атрибуты:</strong></p>
+<ul class="simple">
+<li><p><cite>n_clusters</cite> (int): Количество кластеров для формирования.</p></li>
+<li><p><cite>max_iter</cite> (int): Количество итераций для поиска начальных центров кластеров.</p></li>
+<li><p><cite>random_state</cite> (int): Зерно для инициализации генератора случайных чисел.</p></li>
+<li><p><cite>model</cite> (sklearn.cluster.KMeans): Объект модели KMeans, обученный на данных.</p></li>
+</ul>
+<p><strong>Методы:</strong></p>
+<ul class="simple">
+<li><p><cite>fit(X)</cite>: Обучает модель KMeans на данных X.</p></li>
+<li><p><cite>predict(X)</cite>: Прогнозирует метки кластеров для данных X на основе обученной модели KMeans.</p></li>
+<li><p><cite>get_centers()</cite>: Возвращает центры кластеров, найденные моделью KMeans.</p></li>
+</ul>
+<p>Подробную информацию о каждом методе можно найти в документации.</p>
+</div>
+<p><strong>Метода AgglomerativeClustering:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_blobs</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="kn">from</span> <span class="nn">classes.AgglomerativeClustering</span> <span class="kn">import</span> <span class="n">AgglomerativeClustering</span>
+<span class="c1"># Создание синтетических данных</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_blobs</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">centers</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="c1"># Создание экземпляра класса AgglomerativeClustering</span>
+<span class="n">agg_clustering</span> <span class="o">=</span> <span class="n">AgglomerativeClustering</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">linkage</span><span class="o">=</span><span class="s1">&#39;single&#39;</span><span class="p">)</span>
+
+<span class="c1"># Обучение модели и предсказание меток</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">agg_clustering</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>  <span class="c1"># Выводит предсказанные метки</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Метод AgglomerativeClustering представляет агломеративную кластеризацию.</p>
+<p><strong>Параметры:</strong></p>
+<ul class="simple">
+<li><p><cite>n_clusters</cite> (int): Количество кластеров для поиска.</p></li>
+<li><p><cite>linkage</cite> (str): Критерий объединения кластеров. Допустимые значения: „single“ и „complete“.</p></li>
+</ul>
+<p><strong>Атрибуты:</strong></p>
+<ul class="simple">
+<li><p><cite>labels_</cite> (ndarray): Метки кластеров, назначенные каждой точке данных после обучения.</p></li>
+</ul>
+<p><strong>Методы:</strong></p>
+<ul class="simple">
+<li><p><cite>fit(X)</cite>: Обучение модели агломеративной кластеризации на входных данных.</p></li>
+<li><p><cite>fit_predict(X)</cite>: Обучение модели агломеративной кластеризации на входных данных и возврат меток кластеров.</p></li>
+</ul>
+<p>Подробную информацию о каждом методе можно найти в документации.</p>
+</div>
+<p><strong>Метод CURE (Clustering Using Representatives):</strong></p>
+<div class="admonition tip">
+<p class="admonition-title">Совет</p>
+<p>CURE - это аббревиатура, которая расшифровывается как «Clustering Using Representatives». Это алгоритм кластеризации, который использует представительные точки для формирования кластеров. Он основан на итеративном процессе объединения ближайших кластеров и обновлении их представительных точек.</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_blobs</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">silhouette_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">mpl_toolkits.mplot3d</span> <span class="kn">import</span> <span class="n">Axes3D</span>
+<span class="kn">from</span> <span class="nn">classes.CURE</span> <span class="kn">import</span> <span class="n">CURE</span>
+
+<span class="c1"># Генерация синтетических данных</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_blobs</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">n_features</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">centers</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Масштабирование данных</span>
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">X_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="c1"># Создание и обучение модели CURE</span>
+<span class="n">cure</span> <span class="o">=</span> <span class="n">CURE</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">c_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">linkage</span><span class="o">=</span><span class="s1">&#39;ward&#39;</span><span class="p">)</span>
+<span class="n">cure</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_scaled</span><span class="p">)</span>
+<span class="c1"># Прогнозирование меток кластеров для новых данных</span>
+<span class="n">new_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]])</span>
+<span class="n">new_data_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">new_data</span><span class="p">)</span>
+
+<span class="n">labels</span> <span class="o">=</span> <span class="n">cure</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">new_data_scaled</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Predicted labels:&quot;</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+
+<span class="c1"># Оценка качества кластеризации</span>
+<span class="n">silhouette_avg</span> <span class="o">=</span> <span class="n">silhouette_score</span><span class="p">(</span><span class="n">X_scaled</span><span class="p">,</span> <span class="n">cure</span><span class="o">.</span><span class="n">labels_</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Silhouette Score:&quot;</span><span class="p">,</span> <span class="n">silhouette_avg</span><span class="p">)</span>
+
+<span class="c1"># Визуализация результатов кластеризации</span>
+<span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">X_pca</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_scaled</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+<span class="n">scatter</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X_pca</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X_pca</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">X_pca</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">cure</span><span class="o">.</span><span class="n">labels_</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;PCA 1&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;PCA 2&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;PCA 3&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">scatter</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="instructions">
+<span id="id4"></span><h1>Инструкции по использованию документации<a class="headerlink" href="#instructions" title="Permalink to this heading">#</a></h1>
+<section id="id5">
+<h2>Введение<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<p>Добро пожаловать в документацию для библиотеки классов для кластеризации данных. Эта документация предоставляет полное руководство по использованию и пониманию функциональности библиотеки. Она поможет вам эффективно применять кластеризацию данных в ваших проектах и решать задачи сегментации данных.</p>
+</section>
+<section id="id6">
+<h2>Навигация<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h2>
+<p>Документация состоит из нескольких разделов, которые помогут вам быстро найти нужную информацию. Основные разделы включают в себя описание классов AgglomerativeClustering, CURE, GMeansClustering, HierarchicalClustering, KMeansClustering, MeanShift и OpticsClusterer, а также примеры использования и справочную информацию.</p>
+</section>
+<section id="id7">
+<h2>Структура документации<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Руководства пользователя: Здесь вы найдете подробные инструкции по использованию каждого класса для кластеризации данных. Руководства содержат описание параметров, методов и примеры кода.</p></li>
+<li><p>Примеры использования: Этот раздел предоставляет реальные примеры использования библиотеки классов для различных задач кластеризации данных. Вы сможете найти примеры кода и пошаговые инструкции по их применению.</p></li>
+<li><p>Справочная информация: Здесь вы найдете полный список классов, методов, аргументов и других деталей, связанных с библиотекой классов. Справочная информация поможет вам получить более глубокое понимание функциональности каждого класса.</p></li>
+</ul>
+</section>
+<section id="id8">
+<h2>Поиск информации<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h2>
+<p>Чтобы быстро найти нужную информацию, воспользуйтесь функцией поиска, расположенной вверху страницы документации. Введите ключевые слова или фразы, связанные с вашими вопросами или интересующей вас функциональностью, и нажмите Enter. Результаты поиска будут отображены с ссылками на соответствующие разделы документации.</p>
+</section>
+<section id="id9">
+<h2>Примеры использования<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
+<p>Примеры использования позволяют вам лучше понять, как применять библиотеку классов для конкретных задач кластеризации данных. Каждый пример содержит описание сценария, пошаговые инструкции и соответствующий код. Вы можете адаптировать примеры под свои потребности и использовать их в своих проектах.</p>
+</section>
+<section id="id10">
+<h2>Справочная информация<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h2>
+<p>В справочной информации вы найдете полный список классов, методов и аргументов, доступных в библиотеке классов для кластеризации данных. Это поможет вам лучше понять параметры и аргументы, используемые в библиотеке. Используйте справочную информацию в качестве справочного ресурса при разработке собственных алгоритмов и при адаптации библиотеки к вашим потребностям.</p>
+</section>
+<section id="id11">
+<h2>Взаимодействие с сообществом<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h2>
+<p>Если у вас возникли вопросы, проблемы или предложения по улучшению библиотеки классов, не стесняйтесь обращаться к нашему сообществу. Вы можете задать вопросы на форуме, поучаствовать в обсуждениях или сообщить о проблеме в системе отслеживания ошибок. Мы ценим ваше участие и всегда готовы помочь.</p>
+</section>
+<section id="id12">
+<h2>Важные указания<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Перед использованием библиотеки классов рекомендуется ознакомиться с документацией и изучить примеры использования.</p></li>
+<li><p>Обратите внимание на версию библиотеки классов, чтобы использовать соответствующую документацию и функциональность.</p></li>
+<li><p>Если вы столкнулись с проблемами или непонятностями, обратитесь к документации или обратитесь за помощью к сообществу.</p></li>
+</ul>
+<p>Мы надеемся, что наша документация поможет вам успешно применять кластеризацию данных в ваших проектах и достигать ваших целей. Если у вас есть предложения или отзывы по улучшению документации, пожалуйста, сообщите нам. Желаем вам успешных и продуктивных экспериментов с кластеризацией данных!</p>
+</section>
+<section id="id13">
+<h2>Документация<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h2>
+<p>Дополнительную информацию о каждом классе и его методах можно найти в <a class="reference internal" href="index.html"><span class="doc">документации</span></a>.</p>
+</section>
+<section id="id14">
+<h2>Автор<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h2>
+<p>Библиотека разработана и поддерживается Karimjon.</p>
+</section>
+</section>
 
 
-            </article>
+                </article>
+              
 
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">назад</p>
+        <p class="prev-next-title">Добро пожаловать в документацию ClusterKit!</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="modules.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">вперёд</p>
+        <p class="prev-next-title">LibraryClassters</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
 
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Содержание
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Кластеризация - Библиотека Python</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Установка</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Возможности</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Пример использования</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Инструкции по использованию документации</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Введение</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Навигация</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Структура документации</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Поиск информации</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Примеры использования</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Справочная информация</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Взаимодействие с сообществом</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Важные указания</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Документация</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Автор</a></li>
+</ul>
+</li>
+</ul>
 
-            <footer class="bd-footer-article">
+  </nav></div>
 
-              <div class="footer-article-items footer-article__inner">
-
-                <div class="footer-article-item">
-                  <!-- Previous / next buttons -->
-                  <div class="prev-next-area">
-                  </div>
-                </div>
-
-              </div>
-
-            </footer>
-
+</div></div>
+              
+            
           </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+По Karimjon
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023, Karimjon.
+      <br/>
+    
+  </p>
 
-
-          <div class="bd-sidebar-secondary bd-toc">
-            <div class="sidebar-secondary-items sidebar-secondary__inner">
-
-              <div class="sidebar-secondary-item">
-                <div class="page-toc tocsection onthispage">
-                  <i class="fa-solid fa-list"></i> Содержание
-                </div>
-                <nav class="bd-toc-nav page-toc">
-                  <ul class="visible nav section-nav flex-column">
-                    <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link"
-                        href="#id1">Установка</a></li>
-                    <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link"
-                        href="#id2">Возможности</a></li>
-                    <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Пример
-                        использования</a></li>
-                    <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link"
-                        href="#id4">Документация</a></li>
-                    <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Автор</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-
-            </div>
-          </div>
-
-
-        </div>
-        <footer class="bd-footer-content">
-
-          <div class="bd-footer-content__inner container">
-
-            <div class="footer-item">
-
-              <p class="component-author">
-                По Karimjon
-              </p>
-
-            </div>
-
-            <div class="footer-item">
-
-              <p class="copyright">
-
-                © Copyright 2023, Karimjon.
-                <br />
-
-              </p>
-
-            </div>
-
-            <div class="footer-item">
-
-            </div>
-
-            <div class="footer-item">
-
-            </div>
-
-          </div>
-        </footer>
-
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
 
       </main>
     </div>
   </div>
-
+  
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>
-</body>
-
+  </body>
 </html>

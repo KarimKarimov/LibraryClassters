@@ -1,8 +1,8 @@
-classes package
-===============
+Пакет классов
+=============
 
-Submodules
-----------
+Подмодули
+---------
 
 classes.AgglomerativeClustering module
 --------------------------------------
@@ -56,14 +56,6 @@ classes.Optics module
 ---------------------
 
 .. automodule:: classes.Optics
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Module contents
----------------
-
-.. automodule:: classes
    :members:
    :undoc-members:
    :show-inheritance:

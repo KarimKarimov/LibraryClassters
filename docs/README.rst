@@ -1,5 +1,5 @@
 Кластеризация - Библиотека Python
-===================================
+=================================
 
 Это библиотека Python для реализации различных алгоритмов кластеризации. Она предоставляет простой и удобный интерфейс для кластеризации данных и может быть использована для различных задач, включая сегментацию данных, выявление аномалий и понимание структуры данных.
 
@@ -39,26 +39,156 @@ OpticsClusterer
 Пример использования
 --------------------
 
+**Метода KMeansClustering**:
+
+.. tip::
+
+   Для использования класса KMeansClustering, следуйте примеру ниже:
+
+   .. code-block:: python
+
+      import numpy as np
+      from clustering import KMeansClustering
+
+      # Создание набора данных
+      X = np.array([[1, 2], [1, 4], [1, 0], [4, 2], [4, 4], [4, 0]])
+
+      # Кластеризация с помощью алгоритма K-средних
+      kmeans = KMeansClustering(n_clusters=2)
+      kmeans.fit(X)
+      labels = kmeans.predict(X)
+
+      # Вывод меток кластеров
+      print(labels)
+
+   Пожалуйста, убедитесь, что у вас установлена библиотека NumPy, и что класс KMeansClustering находится в модуле "clustering".
+
+
+.. note::
+
+   Класс KMeansClustering предоставляет возможность выполнения кластеризации методом KMeans.
+
+   **Параметры:**
+
+   - `n_clusters` (int, optional, default=8): Количество кластеров для формирования.
+   - `n_init` (int, optional, default=300): Количество итераций для поиска начальных центров кластеров.
+   - `random_state` (int, optional, default=None): Зерно для инициализации генератора случайных чисел.
+
+   **Атрибуты:**
+
+   - `n_clusters` (int): Количество кластеров для формирования.
+   - `max_iter` (int): Количество итераций для поиска начальных центров кластеров.
+   - `random_state` (int): Зерно для инициализации генератора случайных чисел.
+   - `model` (sklearn.cluster.KMeans): Объект модели KMeans, обученный на данных.
+
+   **Методы:**
+
+   - `fit(X)`: Обучает модель KMeans на данных X.
+   - `predict(X)`: Прогнозирует метки кластеров для данных X на основе обученной модели KMeans.
+   - `get_centers()`: Возвращает центры кластеров, найденные моделью KMeans.
+
+   Подробную информацию о каждом методе можно найти в документации.
+
+
+
+**Метода AgglomerativeClustering:**
+
 .. code-block:: python
 
     import numpy as np
-    from clustering import KMeansClustering
+    from sklearn.datasets import make_blobs
+    from sklearn.preprocessing import StandardScaler
+    from classes.AgglomerativeClustering import AgglomerativeClustering
+    # Создание синтетических данных
+    X, y = make_blobs(n_samples=200, centers=4, random_state=42)
+    X = StandardScaler().fit_transform(X)
 
-    # Создание набора данных
-    X = np.array([[1, 2], [1, 4], [1, 0], [4, 2], [4, 4], [4, 0]])
+    # Создание экземпляра класса AgglomerativeClustering
+    agg_clustering = AgglomerativeClustering(n_clusters=4, linkage='single')
 
-    # Кластеризация с помощью алгоритма K-средних
-    kmeans = KMeansClustering(n_clusters=2)
-    kmeans.fit(X)
-    labels = kmeans.predict(X)
+    # Обучение модели и предсказание меток
+    labels = agg_clustering.fit_predict(X)
 
-    # Вывод меток кластеров
-    print(labels)
+    print(labels)  # Выводит предсказанные метки
+
+.. note::
+
+   Метод AgglomerativeClustering представляет агломеративную кластеризацию.
+
+   **Параметры:**
+
+   - `n_clusters` (int): Количество кластеров для поиска.
+   - `linkage` (str): Критерий объединения кластеров. Допустимые значения: 'single' и 'complete'.
+
+   **Атрибуты:**
+
+   - `labels_` (ndarray): Метки кластеров, назначенные каждой точке данных после обучения.
+
+   **Методы:**
+
+   - `fit(X)`: Обучение модели агломеративной кластеризации на входных данных.
+   - `fit_predict(X)`: Обучение модели агломеративной кластеризации на входных данных и возврат меток кластеров.
+
+   Подробную информацию о каждом методе можно найти в документации.
+
+
+**Метод CURE (Clustering Using Representatives):**
+
+.. tip:: CURE - это аббревиатура, которая расшифровывается как "Clustering Using Representatives". Это алгоритм кластеризации, который использует представительные точки для формирования кластеров. Он основан на итеративном процессе объединения ближайших кластеров и обновлении их представительных точек.
+
+.. code-block:: python
+
+    import numpy as np
+    from sklearn.datasets import make_blobs
+    from sklearn.preprocessing import StandardScaler
+    from sklearn.metrics import silhouette_score
+    from sklearn.decomposition import PCA
+    import matplotlib.pyplot as plt
+    from mpl_toolkits.mplot3d import Axes3D
+    from classes.CURE import CURE
+
+    # Генерация синтетических данных
+    X, y = make_blobs(n_samples=100, n_features=3, centers=4, random_state=42)
+
+    # Масштабирование данных
+    scaler = StandardScaler()
+    X_scaled = scaler.fit_transform(X)
+
+    # Создание и обучение модели CURE
+    cure = CURE(n_clusters=4, alpha=0.5, c_size=3, linkage='ward')
+    cure.fit(X_scaled)
+    # Прогнозирование меток кластеров для новых данных
+    new_data = np.array([[0.5, 1.0, -1.5], [-2.0, 3.0, 0.0]])
+    new_data_scaled = scaler.transform(new_data)
+
+    labels = cure.predict(new_data_scaled)
+
+    print("Predicted labels:", labels)
+
+    # Оценка качества кластеризации
+    silhouette_avg = silhouette_score(X_scaled, cure.labels_)
+    print("Silhouette Score:", silhouette_avg)
+
+    # Визуализация результатов кластеризации
+    pca = PCA(n_components=3)
+    X_pca = pca.fit_transform(X_scaled)
+
+    fig = plt.figure()
+    ax = fig.add_subplot(111, projection='3d')
+    scatter = ax.scatter(X_pca[:, 0], X_pca[:, 1], X_pca[:, 2], c=cure.labels_, cmap='viridis')
+    ax.set_xlabel('PCA 1')
+    ax.set_ylabel('PCA 2')
+    ax.set_zlabel('PCA 3')
+    plt.colorbar(scatter)
+    plt.show()
+
+
+
 
 .. _instructions:
 
 Инструкции по использованию документации
-=======================================
+========================================
 
 Введение
 --------
@@ -69,7 +199,7 @@ OpticsClusterer
 Документация состоит из нескольких разделов, которые помогут вам быстро найти нужную информацию. Основные разделы включают в себя описание классов AgglomerativeClustering, CURE, GMeansClustering, HierarchicalClustering, KMeansClustering, MeanShift и OpticsClusterer, а также примеры использования и справочную информацию.
 
 Структура документации
----------------------
+----------------------
 - Руководства пользователя: Здесь вы найдете подробные инструкции по использованию каждого класса для кластеризации данных. Руководства содержат описание параметров, методов и примеры кода.
 
 - Примеры использования: Этот раздел предоставляет реальные примеры использования библиотеки классов для различных задач кластеризации данных. Вы сможете найти примеры кода и пошаговые инструкции по их применению.
@@ -93,7 +223,7 @@ OpticsClusterer
 Если у вас возникли вопросы, проблемы или предложения по улучшению библиотеки классов, не стесняйтесь обращаться к нашему сообществу. Вы можете задать вопросы на форуме, поучаствовать в обсуждениях или сообщить о проблеме в системе отслеживания ошибок. Мы ценим ваше участие и всегда готовы помочь.
 
 Важные указания
-----------------
+---------------
 - Перед использованием библиотеки классов рекомендуется ознакомиться с документацией и изучить примеры использования.
 - Обратите внимание на версию библиотеки классов, чтобы использовать соответствующую документацию и функциональность.
 - Если вы столкнулись с проблемами или непонятностями, обратитесь к документации или обратитесь за помощью к сообществу.
@@ -104,7 +234,7 @@ OpticsClusterer
 Документация
 ------------
 
-Дополнительную информацию о каждом классе и его методах можно найти в :doc:`документации </docs/index>`.
+Дополнительную информацию о каждом классе и его методах можно найти в :doc:`документации <index>`.
 
 Автор
 -----
