@@ -3,7 +3,7 @@ from MV.metrix import SilhouetteScore
 from clustering.KMeans import KMeansClustering
 from MV.vizualizer import ClusterVisualizer
 from MV.metrix import SilhouetteScore
-from clustering.Gmeans import GMeansClustering
+
 # Создаем случайные данные
 X, y = make_blobs(n_samples=1000, centers=8, n_features=2, random_state=42)
 

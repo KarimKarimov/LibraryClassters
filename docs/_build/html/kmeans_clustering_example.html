@@ -7,8 +7,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Алфавитный указатель &#8212; документация ClusterKit 1.0.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>KMeans Clustering Example &#8212; документация ClusterKit 1.0.0</title>
   
   
   
@@ -40,9 +41,11 @@
     <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script src="_static/translations.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
-    <link rel="index" title="Алфавитный указатель" href="#" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'kmeans_clustering_example';</script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
     <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Agglomerative Clustering Example" href="agglomerative_clustering_example.html" />
+    <link rel="prev" title="Кластеризация - Библиотека Python" href="README.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ru"/>
   </head>
@@ -120,7 +123,7 @@
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Содержание:</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="README.html">Кластеризация - Библиотека Python</a></li>
 
 
@@ -172,6 +175,54 @@
 
 
 
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Загрузите эту страницу">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/kmeans_clustering_example.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Скачать исходный файл"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Распечатать в PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
 <button onclick="toggleFullScreen()"
   class="btn btn-sm btn-fullscreen-button"
   title="Полноэкранный режим"
@@ -214,7 +265,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1></h1>
+    <h1>KMeans Clustering Example</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -228,226 +279,59 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
+  <section id="kmeans-clustering-example">
+<h1>KMeans Clustering Example<a class="headerlink" href="#kmeans-clustering-example" title="Permalink to this heading">#</a></h1>
+<p><strong>Код</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_blobs</span>
+<span class="kn">from</span> <span class="nn">MV.metrix</span> <span class="kn">import</span> <span class="n">SilhouetteScore</span>
+<span class="kn">from</span> <span class="nn">clustering.KMeans</span> <span class="kn">import</span> <span class="n">KMeansClustering</span>
+<span class="kn">from</span> <span class="nn">MV.vizualizer</span> <span class="kn">import</span> <span class="n">ClusterVisualizer</span>
+<span class="kn">from</span> <span class="nn">MV.metrix</span> <span class="kn">import</span> <span class="n">SilhouetteScore</span>
 
-<h1 id="index">Алфавитный указатель</h1>
+<span class="c1"># Создаем случайные данные</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_blobs</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">centers</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">n_features</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 
-<div class="genindex-jumpbox">
- <a href="#A"><strong>A</strong></a>
- | <a href="#C"><strong>C</strong></a>
- | <a href="#F"><strong>F</strong></a>
- | <a href="#G"><strong>G</strong></a>
- | <a href="#H"><strong>H</strong></a>
- | <a href="#K"><strong>K</strong></a>
- | <a href="#L"><strong>L</strong></a>
- | <a href="#M"><strong>M</strong></a>
- | <a href="#O"><strong>O</strong></a>
- | <a href="#P"><strong>P</strong></a>
- | <a href="#S"><strong>S</strong></a>
- | <a href="#М"><strong>М</strong></a>
- 
+<span class="c1"># Инициализируем объекты классов</span>
+<span class="n">clustering</span> <span class="o">=</span> <span class="n">KMeansClustering</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">metric</span> <span class="o">=</span> <span class="n">SilhouetteScore</span><span class="p">()</span>
+<span class="n">visualizer</span> <span class="o">=</span> <span class="n">ClusterVisualizer</span><span class="p">()</span>
+
+<span class="c1"># Обучаем модель на данных</span>
+<span class="n">clustering</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="c1"># Получаем метки кластеров для данных</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">clustering</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="c1"># Вычисляем значение метрики качества кластеризации</span>
+<span class="n">score</span> <span class="o">=</span> <span class="n">metric</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Silhouette score:&quot;</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span>
+
+<span class="c1"># Визуализируем данные и метки кластеров</span>
+<span class="n">visualizer</span><span class="o">.</span><span class="n">plot_clusters</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+
+<span class="c1"># Визуализируем значение метрики качества кластеризации</span>
+<span class="n">visualizer</span><span class="o">.</span><span class="n">plot_silhouette_score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+</pre></div>
 </div>
-<h2 id="A">A</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="classes.html#classes.AgglomerativeClustering.AgglomerativeClustering">AgglomerativeClustering (класс в classes.AgglomerativeClustering)</a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="C">C</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li>
-    classes.AgglomerativeClustering
-
-      <ul>
-        <li><a href="classes.html#module-classes.AgglomerativeClustering">модуль</a>
-</li>
-      </ul></li>
-      <li>
-    classes.CURE
-
-      <ul>
-        <li><a href="classes.html#module-classes.CURE">модуль</a>
-</li>
-      </ul></li>
-      <li>
-    classes.Gmeans
-
-      <ul>
-        <li><a href="classes.html#module-classes.Gmeans">модуль</a>
-</li>
-      </ul></li>
-      <li>
-    classes.HierarchicalClustering
-
-      <ul>
-        <li><a href="classes.html#module-classes.HierarchicalClustering">модуль</a>
-</li>
-      </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li>
-    classes.KMeans
-
-      <ul>
-        <li><a href="classes.html#module-classes.KMeans">модуль</a>
-</li>
-      </ul></li>
-      <li>
-    classes.MeanShift
-
-      <ul>
-        <li><a href="classes.html#module-classes.MeanShift">модуль</a>
-</li>
-      </ul></li>
-      <li>
-    classes.Optics
-
-      <ul>
-        <li><a href="classes.html#module-classes.Optics">модуль</a>
-</li>
-      </ul></li>
-      <li><a href="classes.html#classes.CURE.CURE">CURE (класс в classes.CURE)</a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="F">F</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="classes.html#classes.AgglomerativeClustering.AgglomerativeClustering.fit">fit() (метод classes.AgglomerativeClustering.AgglomerativeClustering)</a>
-
-      <ul>
-        <li><a href="classes.html#classes.CURE.CURE.fit">(метод classes.CURE.CURE)</a>
-</li>
-        <li><a href="classes.html#classes.Gmeans.GMeansClustering.fit">(метод classes.Gmeans.GMeansClustering)</a>
-</li>
-        <li><a href="classes.html#classes.HierarchicalClustering.HierarchicalClustering.fit">(метод classes.HierarchicalClustering.HierarchicalClustering)</a>
-</li>
-        <li><a href="classes.html#classes.KMeans.KMeansClustering.fit">(метод classes.KMeans.KMeansClustering)</a>
-</li>
-        <li><a href="classes.html#classes.MeanShift.MeanShift.fit">(метод classes.MeanShift.MeanShift)</a>
-</li>
-        <li><a href="classes.html#classes.Optics.OpticsClusterer.fit">(метод classes.Optics.OpticsClusterer)</a>
-</li>
-      </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="classes.html#classes.AgglomerativeClustering.AgglomerativeClustering.fit_predict">fit_predict() (метод classes.AgglomerativeClustering.AgglomerativeClustering)</a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="G">G</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="classes.html#classes.Gmeans.GMeansClustering.get_centers">get_centers() (метод classes.Gmeans.GMeansClustering)</a>
-
-      <ul>
-        <li><a href="classes.html#classes.KMeans.KMeansClustering.get_centers">(метод classes.KMeans.KMeansClustering)</a>
-</li>
-      </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="classes.html#classes.Gmeans.GMeansClustering">GMeansClustering (класс в classes.Gmeans)</a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="H">H</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="classes.html#classes.HierarchicalClustering.HierarchicalClustering">HierarchicalClustering (класс в classes.HierarchicalClustering)</a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="K">K</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="classes.html#classes.KMeans.KMeansClustering">KMeansClustering (класс в classes.KMeans)</a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="L">L</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="classes.html#classes.CURE.CURE.load_model">load_model() (статический метод classes.CURE.CURE)</a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="M">M</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="classes.html#classes.MeanShift.MeanShift">MeanShift (класс в classes.MeanShift)</a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="O">O</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="classes.html#classes.Optics.OpticsClusterer">OpticsClusterer (класс в classes.Optics)</a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="P">P</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="classes.html#classes.CURE.CURE.predict">predict() (метод classes.CURE.CURE)</a>
-
-      <ul>
-        <li><a href="classes.html#classes.Gmeans.GMeansClustering.predict">(метод classes.Gmeans.GMeansClustering)</a>
-</li>
-        <li><a href="classes.html#classes.HierarchicalClustering.HierarchicalClustering.predict">(метод classes.HierarchicalClustering.HierarchicalClustering)</a>
-</li>
-        <li><a href="classes.html#classes.KMeans.KMeansClustering.predict">(метод classes.KMeans.KMeansClustering)</a>
-</li>
-        <li><a href="classes.html#classes.MeanShift.MeanShift.predict">(метод classes.MeanShift.MeanShift)</a>
-</li>
-        <li><a href="classes.html#classes.Optics.OpticsClusterer.predict">(метод classes.Optics.OpticsClusterer)</a>
-</li>
-      </ul></li>
-  </ul></td>
-</tr></table>
-
-<h2 id="S">S</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="classes.html#classes.CURE.CURE.save_model">save_model() (метод classes.CURE.CURE)</a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="М">М</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li>
-    модуль
-
-      <ul>
-        <li><a href="classes.html#module-classes.AgglomerativeClustering">classes.AgglomerativeClustering</a>
-</li>
-        <li><a href="classes.html#module-classes.CURE">classes.CURE</a>
-</li>
-        <li><a href="classes.html#module-classes.Gmeans">classes.Gmeans</a>
-</li>
-        <li><a href="classes.html#module-classes.HierarchicalClustering">classes.HierarchicalClustering</a>
-</li>
-        <li><a href="classes.html#module-classes.KMeans">classes.KMeans</a>
-</li>
-        <li><a href="classes.html#module-classes.MeanShift">classes.MeanShift</a>
-</li>
-        <li><a href="classes.html#module-classes.Optics">classes.Optics</a>
-</li>
-      </ul></li>
-  </ul></td>
-</tr></table>
-
+<div class="admonition- admonition">
+<p class="admonition-title">Описание шагов</p>
+<p>Шаг 1:
+Создается набор данных <cite>X</cite>, содержащий координаты точек, которые будут кластеризованы.</p>
+<p>Шаг 2:
+Создается объект <cite>kmeans</cite> класса KMeansClustering с указанием количества кластеров.
+Метод <cite>fit</cite> вызывается для обучения модели на данных <cite>X</cite>. Затем вызывается метод <cite>predict</cite>,
+чтобы получить метки кластеров для данных <cite>X</cite>.</p>
+<p>Шаг 3:
+Выводятся метки кластеров для данных <cite>X</cite>.</p>
+<p><em>Пожалуйста, убедитесь, что у вас установлена библиотека NumPy, и что класс KMeansClustering находится в модуле «clustering».</em></p>
+</div>
+<p><strong>Результат</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Silhouette</span> <span class="n">score</span><span class="p">:</span> <span class="mf">0.4958856269356724</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/Figure_1.png"><img alt="Alternative text" class="align-center" src="_images/Figure_1.png" style="width: 500px; height: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/Figure_2.png"><img alt="Alternative text" class="align-center" src="_images/Figure_2.png" style="width: 500px; height: 400px;" /></a>
+</section>
 
 
                 </article>
@@ -461,6 +345,24 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="README.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">назад</p>
+        <p class="prev-next-title">Кластеризация - Библиотека Python</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="agglomerative_clustering_example.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">вперёд</p>
+        <p class="prev-next-title">Agglomerative Clustering Example</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>

@@ -10,7 +10,6 @@ X = iris.data
 # Выполним стандартизацию данных
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
-print(X)
 # Создадим экземпляр класса OpticsClusterer
 clusterer = OpticsClusterer(min_samples=5, xi=0.05, min_cluster_size=0.1)
 

@@ -36,154 +36,68 @@ MeanShift
 OpticsClusterer
     Реализация алгоритма OPTICS (Ordering Points To Identify the Clustering Structure) для кластеризации.
 
+
 Пример использования
---------------------
+====================
+Примеры использования позволяют вам лучше понять, как применять библиотеку классов для конкретных задач кластеризации данных. Каждый пример содержит описание сценария, пошаговые инструкции и соответствующий код. Вы можете адаптировать примеры под свои потребности и использовать их в своих проектах.
 
-**Метода KMeansClustering**:
+Метода KMeansClustering:
+------------------------
 
-.. tip::
+.. toctree::
+   :maxdepth: 2
+   :caption: Содержание:
 
-   Для использования класса KMeansClustering, следуйте примеру ниже:
-
-   .. code-block:: python
-
-      import numpy as np
-      from clustering import KMeansClustering
-
-      # Создание набора данных
-      X = np.array([[1, 2], [1, 4], [1, 0], [4, 2], [4, 4], [4, 0]])
-
-      # Кластеризация с помощью алгоритма K-средних
-      kmeans = KMeansClustering(n_clusters=2)
-      kmeans.fit(X)
-      labels = kmeans.predict(X)
-
-      # Вывод меток кластеров
-      print(labels)
-
-   Пожалуйста, убедитесь, что у вас установлена библиотека NumPy, и что класс KMeansClustering находится в модуле "clustering".
+   kmeans_clustering_example
 
 
-.. note::
+Метода AgglomerativeClustering
+------------------------------
 
-   Класс KMeansClustering предоставляет возможность выполнения кластеризации методом KMeans.
+.. toctree::
+   :maxdepth: 2
+   :caption: Содержание:
 
-   **Параметры:**
+   agglomerative_clustering_example
+   
+Метод CURE (Clustering Using Representatives)
+---------------------------------------------
 
-   - `n_clusters` (int, optional, default=8): Количество кластеров для формирования.
-   - `n_init` (int, optional, default=300): Количество итераций для поиска начальных центров кластеров.
-   - `random_state` (int, optional, default=None): Зерно для инициализации генератора случайных чисел.
+.. toctree::
+   :maxdepth: 2
+   :caption: Содержание:
 
-   **Атрибуты:**
-
-   - `n_clusters` (int): Количество кластеров для формирования.
-   - `max_iter` (int): Количество итераций для поиска начальных центров кластеров.
-   - `random_state` (int): Зерно для инициализации генератора случайных чисел.
-   - `model` (sklearn.cluster.KMeans): Объект модели KMeans, обученный на данных.
-
-   **Методы:**
-
-   - `fit(X)`: Обучает модель KMeans на данных X.
-   - `predict(X)`: Прогнозирует метки кластеров для данных X на основе обученной модели KMeans.
-   - `get_centers()`: Возвращает центры кластеров, найденные моделью KMeans.
-
-   Подробную информацию о каждом методе можно найти в документации.
+   cure_clustering_example
 
 
+Метод G-Means
+-------------
 
-**Метода AgglomerativeClustering:**
+.. toctree::
+   :maxdepth: 2
+   :caption: Содержание:
 
-.. code-block:: python
-
-    import numpy as np
-    from sklearn.datasets import make_blobs
-    from sklearn.preprocessing import StandardScaler
-    from classes.AgglomerativeClustering import AgglomerativeClustering
-    # Создание синтетических данных
-    X, y = make_blobs(n_samples=200, centers=4, random_state=42)
-    X = StandardScaler().fit_transform(X)
-
-    # Создание экземпляра класса AgglomerativeClustering
-    agg_clustering = AgglomerativeClustering(n_clusters=4, linkage='single')
-
-    # Обучение модели и предсказание меток
-    labels = agg_clustering.fit_predict(X)
-
-    print(labels)  # Выводит предсказанные метки
-
-.. note::
-
-   Метод AgglomerativeClustering представляет агломеративную кластеризацию.
-
-   **Параметры:**
-
-   - `n_clusters` (int): Количество кластеров для поиска.
-   - `linkage` (str): Критерий объединения кластеров. Допустимые значения: 'single' и 'complete'.
-
-   **Атрибуты:**
-
-   - `labels_` (ndarray): Метки кластеров, назначенные каждой точке данных после обучения.
-
-   **Методы:**
-
-   - `fit(X)`: Обучение модели агломеративной кластеризации на входных данных.
-   - `fit_predict(X)`: Обучение модели агломеративной кластеризации на входных данных и возврат меток кластеров.
-
-   Подробную информацию о каждом методе можно найти в документации.
+   gmeans_clustering_example
 
 
-**Метод CURE (Clustering Using Representatives):**
+Метод MeanShift
+---------------
 
-.. tip:: CURE - это аббревиатура, которая расшифровывается как "Clustering Using Representatives". Это алгоритм кластеризации, который использует представительные точки для формирования кластеров. Он основан на итеративном процессе объединения ближайших кластеров и обновлении их представительных точек.
+.. toctree::
+   :maxdepth: 2
+   :caption: Содержание:
 
-.. code-block:: python
-
-    import numpy as np
-    from sklearn.datasets import make_blobs
-    from sklearn.preprocessing import StandardScaler
-    from sklearn.metrics import silhouette_score
-    from sklearn.decomposition import PCA
-    import matplotlib.pyplot as plt
-    from mpl_toolkits.mplot3d import Axes3D
-    from classes.CURE import CURE
-
-    # Генерация синтетических данных
-    X, y = make_blobs(n_samples=100, n_features=3, centers=4, random_state=42)
-
-    # Масштабирование данных
-    scaler = StandardScaler()
-    X_scaled = scaler.fit_transform(X)
-
-    # Создание и обучение модели CURE
-    cure = CURE(n_clusters=4, alpha=0.5, c_size=3, linkage='ward')
-    cure.fit(X_scaled)
-    # Прогнозирование меток кластеров для новых данных
-    new_data = np.array([[0.5, 1.0, -1.5], [-2.0, 3.0, 0.0]])
-    new_data_scaled = scaler.transform(new_data)
-
-    labels = cure.predict(new_data_scaled)
-
-    print("Predicted labels:", labels)
-
-    # Оценка качества кластеризации
-    silhouette_avg = silhouette_score(X_scaled, cure.labels_)
-    print("Silhouette Score:", silhouette_avg)
-
-    # Визуализация результатов кластеризации
-    pca = PCA(n_components=3)
-    X_pca = pca.fit_transform(X_scaled)
-
-    fig = plt.figure()
-    ax = fig.add_subplot(111, projection='3d')
-    scatter = ax.scatter(X_pca[:, 0], X_pca[:, 1], X_pca[:, 2], c=cure.labels_, cmap='viridis')
-    ax.set_xlabel('PCA 1')
-    ax.set_ylabel('PCA 2')
-    ax.set_zlabel('PCA 3')
-    plt.colorbar(scatter)
-    plt.show()
+   meanShift_clustering_example
 
 
+Метод OPTICS (Ordering Points To Identify the Clustering Structure)
+-------------------------------------------------------------------
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Содержание:
+
+   optics_clustering_example
 
 .. _instructions:
 

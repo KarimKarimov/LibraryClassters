@@ -7,7 +7,7 @@ mean_shift = MeanShift(kernel_bandwidth=0.5)
 
 # Генерация случайных данных для кластеризации
 X = np.random.rand(100, 2)
-print(X)
+
 # Кластеризация с использованием метода MeanShift
 mean_shift.fit(X)
 
