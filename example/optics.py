@@ -2,7 +2,7 @@ import numpy as np
 from sklearn.datasets import load_iris
 from sklearn.preprocessing import StandardScaler
 from classes.Optics import OpticsClusterer
-
+from MV.vizualizer import ClusterVisualizer
 # Загрузим набор данных iris
 iris = load_iris()
 X = iris.data
@@ -20,3 +20,10 @@ labels = clusterer.predict()
 # Выведем результаты
 print("Кластеры:")
 print(labels)
+
+visualizer = ClusterVisualizer()
+# Визуализируем данные и метки кластеров
+visualizer.plot_clusters(X_scaled, labels)
+
+# Визуализируем значение метрики качества кластеризации
+visualizer.plot_silhouette_score(X_scaled, labels)
